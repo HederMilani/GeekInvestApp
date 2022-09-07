@@ -7,7 +7,7 @@ Necessário realizar a instalaçãos dos seguintes componentes:
     # Python
         > Django (pip3 install django)
         > Djongo
-        > Pymongo
+        > Pymongo v3.12.3 (pip install pymongo==3.12.3)
         > Mongoengine
         > DjangoRestFramework
 
