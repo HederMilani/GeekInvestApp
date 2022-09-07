@@ -1,6 +1,8 @@
+# <------------Importar Bibliotecas------------->
 from django.db import models
 import uuid
 
+# <-------------Classe Model-------------------->
 class InstituicaoModel(models.Model):
     id = models.UUIDField(
         primary_key=True,
