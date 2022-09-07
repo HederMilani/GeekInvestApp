@@ -1,6 +1,4 @@
 # <----------------Importar Bibliotecas----------------->
-from dataclasses import fields
-from pyexpat import model
 from rest_framework import serializers
 
 # <----------------Importar Componentes----------------->
@@ -10,4 +8,4 @@ from .models import InstituicaoModel
 class InstituicaoSerializers(serializers.ModelSerializer):
     class Meta:
         model = InstituicaoModel
-        fields = ['__all__']
+        fields = '__all__'
