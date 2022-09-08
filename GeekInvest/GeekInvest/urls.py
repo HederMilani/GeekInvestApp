@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # <---------------Rotas APi------------------->
-    path('api/v1/', include('Instituicao.urls', namespace='api')),
-    
+    path('api/v1/', include('Instituicao.urls', namespace='instituicao')),
+    path('api/v1', include('Stock.urls', namespace='stock')),
+
 ]
