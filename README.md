@@ -10,6 +10,8 @@ Necessário realizar a instalaçãos dos seguintes componentes:
         > Pymongo v3.12.3 (pip install pymongo==3.12.3)
         > Mongoengine
         > DjangoRestFramework
+        > Djoser (pip install djoser)
+        > DjangoRestFramework-SimpleJWT (pip install djangorestframework-simplejwt)
 
     # JavaScript
         > Vue

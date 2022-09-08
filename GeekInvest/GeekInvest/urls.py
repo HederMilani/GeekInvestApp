@@ -16,8 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# <-----------Importar biblioteca para autenticação JWT--------------->
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # <--------------Rotas Auth API------------------>
+    path('api/v1/auth', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/v1/auth/refresh', TokenRefreshView.as_view(), name='token_refresh'),
 
     # <---------------Rotas APi------------------->
     path('api/v1/', include('Instituicao.urls', namespace='instituicao')),
