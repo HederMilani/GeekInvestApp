@@ -9,4 +9,4 @@ from .serializers import stock_serializers
 class stock_viewset(viewsets.ModelViewSet):
     queryset = stock_models.objects.all()
     serializer_class = stock_serializers
-    #permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
