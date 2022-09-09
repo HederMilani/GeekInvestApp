@@ -18,6 +18,7 @@ from django.urls import path, include
 
 # <-----------Importar biblioteca para autenticação JWT--------------->
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from Users.views import user_API_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,9 +26,10 @@ urlpatterns = [
     # <--------------Rotas Auth API------------------>
     path('api/v1/auth', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/v1/auth/refresh', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/v1/user', user_API_views.as_view(), name='user'),
 
     # <---------------Rotas APi------------------->
-    path('api/v1/', include('Instituicao.urls', namespace='instituicao')),
+    path('api/v1', include('Instituicao.urls', namespace='instituicao')),
     path('api/v1', include('Stock.urls', namespace='stock')),
 
 ]

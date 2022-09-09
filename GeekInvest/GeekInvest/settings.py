@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # <-------------Apps Sistema--------->
     'Instituicao',
     'Stock',
+    'Users',
     
 ]
 
@@ -136,7 +137,5 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSE':(
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_PERMISSION_CLASSES':(
-        'rest_framework.permission.IsAuthenticated',
-    )
+    
 }
