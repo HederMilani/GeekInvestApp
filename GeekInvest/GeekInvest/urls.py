@@ -29,7 +29,7 @@ urlpatterns = [
     path('api/v1/user', user_API_views.as_view(), name='user'),
 
     # <---------------Rotas APi------------------->
-    path('api/v1', include('Instituicao.urls', namespace='instituicao')),
-    path('api/v1', include('Stock.urls', namespace='stock')),
+    path('api/v1/', include('Instituicao.urls', namespace='instituicao')),
+    path('api/v1/', include('Stock.urls', namespace='stock')),
 
 ]

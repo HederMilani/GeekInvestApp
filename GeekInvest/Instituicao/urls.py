@@ -8,6 +8,6 @@ app_name = 'instituicao'
 
 # <------------------Definir padrões de Rotas da API----------------->
 router = DefaultRouter(trailing_slash=False)
-router.register(r'/instituicao', InstituicaoViewSet)
+router.register(r'instituicao', InstituicaoViewSet)
 
 urlpatterns = router.urls

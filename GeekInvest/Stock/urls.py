@@ -7,6 +7,6 @@ from .views import stock_viewset
 app_name = 'stock'
 
 router = DefaultRouter(trailing_slash=False)
-router.register(r'/stock', stock_viewset)
+router.register(r'stock', stock_viewset)
 
 urlpatterns = router.urls
