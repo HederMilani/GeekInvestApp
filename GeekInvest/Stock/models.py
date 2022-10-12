@@ -1,4 +1,5 @@
 # <------------------Importar Bibliotecas-------------->
+from statistics import mode
 from django.db import models
 import uuid
 
@@ -33,6 +34,16 @@ class stock_models(models.Model):
         blank=False
     )
     cnpj = models.CharField(
+        max_length=25,
+        null=True,
+        blank=True
+    )
+    setor = models.CharField(
+        max_length=50,
+        null=True,
+        blank=True
+    )
+    sub_setor = models.CharField(
         max_length=25,
         null=True,
         blank=True
